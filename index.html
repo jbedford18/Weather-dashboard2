@@ -9,51 +9,79 @@
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />  
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
 </head>
-
-
 <body>
-    
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand">Weather Dashboard!</a>
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </nav>
-    
-
-            <!-- history -->
-            <div class="list-group"></div>
-        </div>
-        <div class="col-8">
-            <div class="row p-2">
-                <div class="card">
-                    <!-- forecast section-->
-                    <div class="card-body"></div>
-                </div>
-            </div>
-                <div class="card-body">
-                    <h4>Weekday Forecast:</h4>
-                </div>
-            <!-- five day -->
-            <div id="weekdayForecast" class="row card"></div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-6 text-center py-2">Weather Dashboard</h1>
         </div>
     </div>
-    
-</div>
 
 
+    <div class="row w-100">
+        <div class="col-3">
+            <div class="bg-white py-2">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <form class="form-inline my-2 my-lg-0 justify-content-center">
+                            <label class="col-12 font-weight-bold text-center mb-1 h4">City Search</label>
+                            <input class="form-control h-100" type="search" placeholder="Location" id="locationSearch">
+                            <button class="btn btn-dark" type="button" id="searchLocBtn">  Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row pl-3">
+                    <div class="col-sm-12 pl-2">
+                        <div class="list-group" id="searchHistory">
+                            <button class="btn btn-secondary align-item-center" type="button" onclick="" id="clearHistoryBtn">Delete History</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="list-group-item" id="historyRows">
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="row border border-dark">
+                <div class="col-12 p-3 pt-2">
+                    <div class="row">
+                        <div class="col-12 py-3 font-weight-bold h1" id="location"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-1">Temperature: <span id="temperature"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-2">Humidity: <span id="humidity"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-3">UV Index: <span id="uv"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 py-2">Wind: <span id="windSpeed"></span></div>
+                    </div>
+                </div>
+            </div>
 
-
-
-
-
-
-</body>
+            <!-- 5 day forecast -->
+            <div class="container my-3 pb-4">
+                <div class="container mx-auto">
+                    <div class="row">
+                        <div class="col-12 py-3 mt-5 font-weight-bold text-center">5 Day Forecast</div>
+                    </div>
+                    <div class="row" id="forecastContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
+</body>
 </html>
