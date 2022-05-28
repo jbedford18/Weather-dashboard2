@@ -7,7 +7,7 @@ A website that provides you with weather details of the area of your choosing
 ## Built With
 * HTML
 * CSS
-* Java
+* Javascript
 
 ## Website
 
